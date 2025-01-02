@@ -7,18 +7,25 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import HindiMovies from './components/HindiMovies';
 import Api from './components/Api';
 function App() {
-
+  
 
   return (
-   <BrowserRouter>
-      <Navbar />
+    // <>
+    //   <Navbar/>
+     
+    //  <Netflixseries/>
+    //  <Login/>
+    // </>
 
-      <Routes>
-        <Route path="/" element={<Netflixseries />} />
-        <Route path="/news" element={<Api />} />
-        <Route path="/bollywood" element={<HindiMovies />} />
-      </Routes>
-    </BrowserRouter>
+    <BrowserRouter>
+   <Navbar/>
+   
+    <Routes>
+      <Route path="/" element={<Netflixseries />} />
+      <Route path="/news" element={<Api />} />
+      <Route path="/bollywood" element={<HindiMovies />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 

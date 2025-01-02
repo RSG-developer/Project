@@ -52,7 +52,7 @@ export default function Api() {
                             <div className="card-body">
                                 <h5 className="card-title">{item.title || "Title not available"}</h5>
                                 <p className="card-text" style={{ fontFamily: "Times New Roman,serif" }}>
-                                    {item.description.slice(0,9) +"..." || "Description not available"}
+                                    {item.description || "Description not available"}
                                 </p>
                                 <a href={item.url || "#"} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                                     Read More

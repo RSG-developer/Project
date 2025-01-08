@@ -1,11 +1,15 @@
 import React from 'react'
 
 import seriesData from '../api/thapa_series.json'
-export default function Netflixseries() {
+export default function Netflixseries({searchQuery}) {
+  const filteredSeries = seriesData.filter((series) =>
+    series.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
    <div className='container my-4 ' id="home"> 
     <div className='row'>
-      {seriesData.map((series, index) => (
+    {filteredSeries.length > 0 ? (
+          filteredSeries.map((series, index)  => (
         <div className="col-md-3 mb-4" key={index}>
         <div className="card " style={{ width: "18rem" }}>
           <img src={series.img_url} className="card-img-top" alt={series.name || "Series Image"} />
@@ -19,7 +23,9 @@ export default function Netflixseries() {
           </div>
          </div> 
         </div>
-      ))}
+      ))):(
+        <div className="text-center">No series found.</div>
+      )}
     </div>
   
   </div>

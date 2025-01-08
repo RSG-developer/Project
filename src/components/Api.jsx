@@ -35,7 +35,7 @@ export default function Api() {
     }
 
     if (error) {
-        return <div className="text-center mt-4 text-red-600">Error: {error}</div>;
+        return <div className="text-center mt-4">Error: {error}</div>;
     }
 
     return (

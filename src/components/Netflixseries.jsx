@@ -12,7 +12,7 @@ export default function Netflixseries() {
           <div className="card-body">
             <h5 className="card-title">{series.name || "Title not available"}</h5>
             <h6>Ratings :{series.rating}</h6>
-            <p className="card-text text-rose-600">{series.description || "Description not available"}</p>
+            <p className="card-text">{series.description || "Description not available"}</p>
             <a href={series.watch_url || "#"} className="btn btn-primary">
               Watch Now
             </a>

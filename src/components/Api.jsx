@@ -11,7 +11,7 @@ export default function Api() {
         const fetchData = async () => {
             try {
                 setLoading(true); // Start loading
-                const response = await fetch('https://newsapi.org/v2/everything?q=apple&from=2025-01-01&to=2025-01-01&sortBy=popularity&apiKey=da832593483345998255a2c7e19ae9cd'); // Replace with your API URL
+                const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=da832593483345998255a2c7e19ae9cd'); // Replace with your API URL
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);

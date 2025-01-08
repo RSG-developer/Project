@@ -24,7 +24,7 @@ export default function Netflixseries({searchQuery}) {
          </div> 
         </div>
       ))):(
-        <div className="text-center">No series found.</div>
+        <div className="text-center fs-2">No series found.</div>
       )}
     </div>
   

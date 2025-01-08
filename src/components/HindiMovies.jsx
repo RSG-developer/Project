@@ -1,10 +1,14 @@
 import React from 'react'
 import HindiSeries from '../api/HindiMovies.json'
-export default function HindiMovies() {
+export default function HindiMovies({searchQuery}) {
+  const filteredSeries = HindiSeries.filter((series) =>
+    series.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
     <div className='container my-4 ' > 
     <div className='row'>
-      {HindiSeries.map((series, index) => (
+    {filteredSeries.length > 0 ? (
+          filteredSeries.map((series, index) => (
         <div className="col-md-3 mb-4" key={index}>
         <div className="card" style={{ width: "18rem" }}>
           <img src={series.img_url} className="card-img-top" alt={series.name || "Series Image"} />
@@ -18,7 +22,10 @@ export default function HindiMovies() {
           </div>
          </div> 
         </div>
-      ))}
+      ))):(
+        <div className="text-center fs-2">No series found.</div>
+
+      )}
     </div>
   
   </div>

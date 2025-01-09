@@ -1,7 +1,7 @@
 import './App.css'
 import Netflixseries from './components/Netflixseries'
 import Navbar from './components/Navbar'
-import Login from './components/login'
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import HindiMovies from './components/HindiMovies';
 import Api from './components/Api';

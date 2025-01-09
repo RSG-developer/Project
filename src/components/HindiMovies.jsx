@@ -23,7 +23,7 @@ export default function HindiMovies({searchQuery}) {
          </div> 
         </div>
       ))):(
-        <div className="text-center fs-2">No series found.</div>
+                <div className="text-center fs-2">No series found.</div>
 
       )}
     </div>

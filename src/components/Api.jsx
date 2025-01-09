@@ -43,7 +43,7 @@ export default function Api() {
     <div className='row'>
                 {data.map((item) => (
                     <div key={item.url} className="col-md-3 mb-4">
-                        <div className="card" style={{ width: "18rem" }}>
+                        <div className="card " style={{ width: "18rem" }}>
                             <img
                                 src={item.urlToImage || 'https://via.placeholder.com/150'}
                                 className="card-img-top"

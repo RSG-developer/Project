@@ -18,8 +18,8 @@ function App() {
      
       <Routes>
         <Route path="/" element={<Netflixseries  searchQuery={searchQuery}/>} />
-        <Route path="/news" element={<Api />} />
         <Route path="/bollywood" element={<HindiMovies searchQuery={searchQuery} />} />
+        <Route path="/news" element={<Api />} />
       </Routes>
     </BrowserRouter>
    

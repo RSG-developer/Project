@@ -5,7 +5,7 @@ export default function HindiMovies({searchQuery}) {
     series.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   return (
-    <div className='container my-4 ' > 
+    <div className='container my-4 ' id="bollywood" > 
     <div className='row'>
     {filteredSeries.length > 0 ? (
           filteredSeries.map((series, index) => (

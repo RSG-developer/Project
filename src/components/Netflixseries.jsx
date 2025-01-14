@@ -6,7 +6,7 @@ export default function Netflixseries({searchQuery}) {
     series.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   return (
-   <div className='container my-3  ' id="home"> 
+   <div className='container my-3 ' id="home"> 
     <div className='row row-cols-1 row-cols-md-4 g-5'>
     {filteredSeries.length > 0 ? (
           filteredSeries.map((series, index)  => (

@@ -15,12 +15,13 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar  searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-     
+     <main>
       <Routes>
         <Route path="/" element={<Netflixseries  searchQuery={searchQuery}/>} />
         <Route path="/bollywood" element={<HindiMovies searchQuery={searchQuery} />} />
         <Route path="/news" element={<Api />} />
       </Routes>
+    </main>
     </BrowserRouter>
    
     </>
